@@ -1,20 +1,20 @@
 spring:
-    jpa:
-        database: postgresql
-        database-platform: org.hibernate.dialect.PostgreSQLDialect
-    datasource:
-        initialization-mode: always
-        driver-class-name: org.postgresql.Driver
-        url: jdbc:postgresql://localhost:5432/library
-        username: postgres
-        password: admin
+  jpa:
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    initialization-mode: always
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/library
+    username: postgres
+    password: admin
 
 endpoints:
-    book-endpoint: http://book-service/api/books
-    user-endpoint: http://user-service/api/users
+  book-endpoint: http://book-service/api/books
+  user-endpoint: http://user-service/api/users
     
 server:
-    port: 10003
+  port: 10003
     
 eureka:
   client:
@@ -22,10 +22,12 @@ eureka:
         defaultZone: http://localhost:10000/eureka
 
 management:
-    endpoints:
-        web:
-            expose: hystrix.stream
-            exposure:
-                include: hystrix.stream
+  endpoints:
+    web:
+      expose: hystrix.stream
+        exposure:
+          include: hystrix.stream
 
-hystrix.dashboard.proxyStreamAllowList: "*"
+hystrix:
+  dashboard:
+    proxyStreamAllowList: "*"
