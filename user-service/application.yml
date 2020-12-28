@@ -1,7 +1,7 @@
 spring:
   jpa:
     database: postgresql
-      database-platform: org.hibernate.dialect.PostgreSQLDialect
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
   datasource:
     initialization-mode: always
     driver-class-name: org.postgresql.Driver
