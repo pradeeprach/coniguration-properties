@@ -10,7 +10,7 @@ spring:
     password: admin
 
 server:
-  ort: 10001
+  port: 10001
     
 eureka:
   client:
