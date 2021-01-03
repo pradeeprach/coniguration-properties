@@ -24,5 +24,4 @@ aws:
 local:
   users:
     file:
-      path: s3-files
-      
+      path: s3-files    
